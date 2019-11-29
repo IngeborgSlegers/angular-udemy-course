@@ -10,7 +10,6 @@
     <app-recipe-item 
       *ngFor="let recipeEl of recipes"
       [recipe]="recipeEl"
-      (recipeSelected)="onRecipeSelected(recipeEl)"
     ></app-recipe-item>
     <!-- [recipe] refers to the recipe after input decorator in recipe-item.component.ts -->
   </div>
