@@ -36,13 +36,17 @@ export class RecipeService {
 
   constructor(private slService: ShoppingListService) {}
 
-  getRecipe() {
+  getRecipes() {
     return this.recipes.slice();
-  }
+  };
+
+  getRecipe(index: number) {
+    return this.recipes[index];
+  };
 
   onAddIngredientsToShoppingList(ingredients: Ingredient[]) {
     console.log('onAddIngredientsToShoppingList in recipe service!');
     console.log(ingredients);
     this.slService.addIngredients(ingredients);
-  }
+  };
 }
